@@ -154,7 +154,7 @@ def get_args_parser():
                         help='dataset path for evaluation')
     parser.add_argument('--nb_classes', default=1000, type=int,
                         help='number of the classification types')
-    parser.add_argument('--imagenet_default_mean_and_std', type=str2bool, default=True)
+    parser.add_argument('--imagenet_default_mean_and_std', type=str2bool, default=False)
     parser.add_argument('--data_set', default='IMNET', choices=['CIFAR', 'IMNET', 'image_folder'],
                         type=str, help='ImageNet dataset path')
     parser.add_argument('--output_dir', default='',
@@ -169,7 +169,7 @@ def get_args_parser():
                         help='resume from checkpoint')
     parser.add_argument('--auto_resume', type=str2bool, default=True)
     parser.add_argument('--save_ckpt', type=str2bool, default=True)
-    parser.add_argument('--save_ckpt_freq', default=10, type=int)
+    parser.add_argument('--save_ckpt_freq', default=1, type=int)
     parser.add_argument('--save_ckpt_num', default=3, type=int)
 
     parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
